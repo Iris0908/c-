@@ -1,10 +1,9 @@
 #pragma once
 
-#include "clockServices/BcnSyncGet.hpp"
-#include "clockServices/BcnSyncSet.hpp"
+#include "clockServices/BcnSync.hpp"
 #include "clockServices/BcnStatusGet.hpp"
 
-struct ClockService : BcnSyncSet, BcnSyncGet, BcnStatusGet
+struct ClockService : BcnSync, BcnStatusGet
 {
     ClockService(std::string _driver) : Service(_driver){}
 };
