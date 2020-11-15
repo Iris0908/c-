@@ -1,0 +1,12 @@
+@startuml clockService
+
+class Service {
+    -deviceDriver
+    +bcnStatusGet(bool)
+    +bcnSyncGet(uint32_t)
+    +bcnSyncSet(uint32_t)
+}
+
+BcnStatusGet -up-|> Service
+
+@enduml
